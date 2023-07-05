@@ -146,7 +146,8 @@ void AmFmRadio::SetVolume() {
         SetVolume(userVolume);
     }
     else {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//        cout << "AmFm Radio is off." << endl;
     }
 }
 
@@ -195,7 +196,8 @@ void AmFmRadio::ToggleBand() {
         }
     }
     else {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//        cout << "AmFm Radio is off." << endl;
     }
 }
 
@@ -219,7 +221,8 @@ int AmFmRadio::SetPresetButton(int buttonNum) {
         return 1; // Set button is working well
     }
     else if (!on) {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//        cout << "AmFm Radio is off." << endl;
         return -2;  // Radio is off
     }
     else {
@@ -247,7 +250,8 @@ int AmFmRadio::SelectPresetButton(int buttonNum) {
         return 1; // Set button is working well
     }
     else if (!on) {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//        cout << "AmFm Radio is off." << endl;
         return -2;  // Radio is off
     }
     else {
@@ -317,7 +321,8 @@ void AmFmRadio::ScanUp() {
         }
     }
     else {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//        cout << "AmFm Radio is off." << endl;
     }
 }
 
@@ -358,7 +363,8 @@ void AmFmRadio::ScanDown() {
         }
     }
     else {
-        cout << "AmFm Radio is off." << endl;
+        // delete for requirements
+//       cout << "AmFm Radio is off." << endl;
     }
 }
 

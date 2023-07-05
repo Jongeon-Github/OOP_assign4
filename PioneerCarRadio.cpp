@@ -19,7 +19,7 @@ using namespace std;
 
 PioneerCarRadio::PioneerCarRadio() {
     // Start with the radio off
-    radio.PowerToggle();
+    AmFmRadio::PowerToggle();
 }
 
 PioneerCarRadio::~PioneerCarRadio() {

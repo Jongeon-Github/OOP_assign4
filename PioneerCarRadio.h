@@ -16,7 +16,6 @@
 class PioneerCarRadio : public AmFmRadio
 {
 private:
-    AmFmRadio radio;
     void UserKey(char key);
     void DisplayPioneerRadio();
 
