@@ -1,0 +1,12 @@
+﻿  AmFmRadio.cpp
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(36,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(37,26): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(47,29): warning C4305: '=': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(81,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(82,26): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(142,34): warning C4305: '=': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(323,39): warning C4305: '+=': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(327,39): warning C4305: '=': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(364,35): warning C4305: '-=': truncation from 'double' to 'float'
+D:\C_Lecture\Github\OOP_assign4\OOP_assign4\AmFmRadio.cpp(368,35): warning C4305: '=': truncation from 'double' to 'float'
+  OOP_assign4.vcxproj -> D:\C_Lecture\Github\OOP_assign4\x64\Debug\OOP_assign4.exe
