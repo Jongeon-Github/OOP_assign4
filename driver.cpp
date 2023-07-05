@@ -13,6 +13,10 @@
 #include <iostream>
 #include < cctype >
 #include "AmFmRadio.h"
+#include "PioneerCarRadio.h"
+
+#define AmFm 0
+#define Pioneer 1
 
 using namespace std;
 
@@ -29,8 +33,12 @@ enum menuItems
     QUIT_PROGRAM
 };
 
+/*
 int main()
 {
+
+#if AmFm
+
 	int			button_OK = 0;
 	int			buttonNum = 0;
 	int			previousVolume = 0;
@@ -117,5 +125,14 @@ int main()
 			
 	} while (choice != QUIT_PROGRAM);
 
+#endif
+
+#if Pioneer
+	PioneerCarRadio carRadio;
+	carRadio.Run();
+
+#endif
 	return 0;
 }
+
+*/

@@ -17,7 +17,8 @@ struct Freqs
 };
 
 class AmFmRadio {
-private:
+//private:
+protected:
 	Freqs	presets[5];
 	Freqs	previousFreq;
 	Freqs	currentFreq;
