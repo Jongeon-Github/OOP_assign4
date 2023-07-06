@@ -164,12 +164,12 @@ void AmFmRadio::SetVolume(int vol) {
     if (vol < 0) {
         vol = 0;
         cout << "## The available volume is from 0 to 100." << endl;
-        cout << "## Automatically changes to 0" << endl;
+        cout << "## Automatically changes to 0" << endl << endl;
     }
     else if (vol > 100) {
         vol = 100;
         cout << "## The available volume is from 0 to 100." << endl;
-        cout << "## Automatically changes to 100" << endl;
+        cout << "## Automatically changes to 100" << endl << endl;
     }
     volume = vol;
 }
@@ -243,9 +243,11 @@ int AmFmRadio::SelectPresetButton(int buttonNum) {
         // Select the preset button and set the current frequency based on the current band
         if (strcmp("AM", band) == 0) {
             current_station = (int)presets[buttonNum].AMFreq;
+            currentFreq.AMFreq = current_station;
         }
         else {
             current_station = (float)presets[buttonNum].FMFreq;
+            currentFreq.FMFreq = current_station;
         }
         return 1; // Set button is working well
     }
