@@ -17,6 +17,8 @@
 
 #pragma warning(disable:4996)
 
+#define EQUAL 0
+
 using namespace std;
 
 
@@ -186,7 +188,7 @@ void AmFmRadio::ToggleBand() {
     if (on) {
         // Toggle between AM and FM bands
         currentFreq = GetCurrentFrequency();
-        if (strcmp(band, "AM") == 0) {
+        if (strcmp(band, "AM") == EQUAL) {
             strcpy(band, "FM");
             current_station = (double)currentFreq.FMFreq;
         }
@@ -212,7 +214,7 @@ void AmFmRadio::ToggleBand() {
 int AmFmRadio::SetPresetButton(int buttonNum) {
     if (on && buttonNum >= 0 && buttonNum < 5) {
         // Set the preset button with the current frequency based on the current band
-        if (strcmp("AM", band) == 0) {
+        if (strcmp("AM", band) == EQUAL) {
             presets[buttonNum].AMFreq = (int)current_station;
         }
         else {
@@ -241,7 +243,7 @@ int AmFmRadio::SetPresetButton(int buttonNum) {
 int AmFmRadio::SelectPresetButton(int buttonNum) {
     if (on && buttonNum >= 0 && buttonNum < 5) {
         // Select the preset button and set the current frequency based on the current band
-        if (strcmp("AM", band) == 0) {
+        if (strcmp("AM", band) == EQUAL) {
             current_station = (int)presets[buttonNum].AMFreq;
             currentFreq.AMFreq = current_station;
         }
@@ -297,7 +299,7 @@ void AmFmRadio::ScanUp() {
     if (on) {
         previousFreq = GetCurrentFrequency();
         // Frequenct UP for AM
-        if (strcmp(band, "AM") == 0) {
+        if (strcmp(band, "AM") == EQUAL) {
             if (previousFreq.AMFreq != 0) {
                 previousFreq.AMFreq += 10; // each +10 for AM
                 currentFreq.AMFreq = previousFreq.AMFreq;
@@ -340,7 +342,7 @@ void AmFmRadio::ScanDown() {
     if (on) {
         previousFreq = GetCurrentFrequency();
         // Frequenct down for AM
-        if (strcmp(band, "AM") == 0) {
+        if (strcmp(band, "AM") == EQUAL) {
             if (previousFreq.AMFreq != 0) {
                 previousFreq.AMFreq -= 10; // each -10 for AM
                 currentFreq.AMFreq = previousFreq.AMFreq;
