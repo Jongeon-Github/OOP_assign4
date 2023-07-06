@@ -4,7 +4,7 @@
 * Student ID: 8790144
 * By: Jongeon Lee
 * Date: Jun 08, 2023
-* Description:
+* Description: Implementation of the PioneerCarRadio class which represents a car radio system.
 */
 
 #include "PioneerCarRadio.h"
@@ -17,14 +17,36 @@
 
 using namespace std;
 
+
+/*
+* Function: PioneerCarRadio()
+* Description: Initializes the radio.
+* Parameters: None
+*/
+
 PioneerCarRadio::PioneerCarRadio() {
     // Start with the radio off
     AmFmRadio::PowerToggle();
 }
 
+
+/*
+* Function: ~PioneerCarRadio()
+* Description: Destructor for the PioneerCarRadio class.
+* Parameters: None
+*/
+
 PioneerCarRadio::~PioneerCarRadio() {
     cout << "PioneerCarRadio is being destroyed." << std::endl;
 }
+
+
+/*
+* Function: Run()
+* Description: Runs the car radio system
+* Parameters: None
+* Returns: None
+*/
 
 void PioneerCarRadio::Run() {
     char key = {0};
@@ -37,6 +59,14 @@ void PioneerCarRadio::Run() {
         }
     }
 }
+
+
+/*
+* Function: UserKey(char key)
+* Description: Handles the user's key input and performs actions based on the input.
+* Parameters: char key: A character representing the user's input key.
+* Returns: None
+*/
 
 void PioneerCarRadio::UserKey(char key) {
     int currentVolume = 0;
@@ -102,7 +132,16 @@ void PioneerCarRadio::UserKey(char key) {
     DisplayPioneerRadio();
 }
 
+
+/*
+* Function: DisplayPioneerRadio()
+* Description: Displays the status and information of the Pioneer car radio.
+* Parameters: None
+* Returns: None
+*/
+
 void PioneerCarRadio::DisplayPioneerRadio() {
+    // Display the status and information of the car radio
     if (on == true) {
         current_station = round(current_station * 100) / 100; 
         cout << "Pioneer XS440" << endl;

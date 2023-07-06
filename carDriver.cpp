@@ -4,7 +4,7 @@
 * Student ID: 8790144
 * By: Jongeon Lee
 * Date: Jun 08, 2023
-* Description: 
+* Description: This is the main driver program for the car radio system.
 */
 
 
