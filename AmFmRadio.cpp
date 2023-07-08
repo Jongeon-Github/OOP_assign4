@@ -218,7 +218,7 @@ int AmFmRadio::SetPresetButton(int buttonNum) {
             presets[buttonNum].AMFreq = (int)current_station;
         }
         else {
-            presets[buttonNum].FMFreq = (float)current_station;
+            presets[buttonNum].FMFreq = round((float)current_station * 100) / 100;
         }
         return 1; // Set button is working well
     }
@@ -421,17 +421,28 @@ void AmFmRadio::SetDisplayOutput(bool display) {
 }
 
 
-/* feedback fix (3 functions modified by feedback) */
+/*
+* Function: GetPowerOn()
+* Description: Get the radio on or off
+* Parameters: None
+* Returns: return current radio power status
+*/
 
+bool AmFmRadio::GetPowerOn() {
+    return on;
+}
+
+
+/* feedback fix (3 functions modified by feedback) */
 /*
 * Function: GetBand()
 * Description: Gets the current band of the car radio.
 * Parameters: None
-* Returns: return current band as struct Freqs
+* Returns: return current band
 */
 
-char AmFmRadio::GetBand() {
-    return *band;
+const char* AmFmRadio::GetBand() {
+    return band;
 }
 
 

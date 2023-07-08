@@ -142,35 +142,35 @@ void PioneerCarRadio::UserKey(char key) {
 
 void PioneerCarRadio::DisplayPioneerRadio() {
     // Display the status and information of the car radio
-    if (on == true) {
-        current_station = round(current_station * 100) / 100; 
+    if (AmFmRadio::GetPowerOn() == true) {
+        double current_station = round(AmFmRadio::SetCurrentStation() * 100) / 100;
         cout << "Pioneer XS440" << endl;
-        cout << (on ? "Radio is On" : "Radio is Off") << endl;
-        cout << "Volume: " << volume << endl;
-        cout << "Current Station: " << current_station << " " << band << endl;
+        cout << (AmFmRadio::GetPowerOn() ? "Radio is On" : "Radio is Off") << endl;
+        cout << "Volume: " << AmFmRadio::GetCurrentVolume() << endl;
+        cout << "Current Station: " << current_station << " " << AmFmRadio::GetBand() << endl;
         cout << "AM Buttons:" << endl;
-        int numElements = sizeof(presets) / sizeof(presets[0]);
+        int numElements = 5; // number of presets array
         int matchArrayNum = 1;
         for (int i = 0; i < numElements; i++) {
             if (i < numElements - matchArrayNum) {
-                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << presets[i].AMFreq << ",  ";
+                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << AmFmRadio::GetPresets(i).AMFreq << ",  ";
             }
             else {
-                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << presets[i].AMFreq << endl;
+                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << AmFmRadio::GetPresets(i).AMFreq << endl;
             }
         }
         cout << "FM Buttons:" << endl;
         for (int i = 0; i < numElements; i++) {
             if (i < numElements - matchArrayNum) {
-                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << presets[i].FMFreq << ",  ";
+                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << AmFmRadio::GetPresets(i).FMFreq << ",  ";
             }
             else {
-                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << presets[i].FMFreq << endl << endl;
+                cout << i + matchArrayNum << ":" << setw(8) << setfill(' ') << AmFmRadio::GetPresets(i).FMFreq << endl << endl;
             }
         }
     }
     else {
         cout << "Pioneer XS440" << endl;
-        cout << (on ? "Radio is On" : "Radio is Off") << endl << endl;
+        cout << (AmFmRadio::GetPowerOn() ? "Radio is On" : "Radio is Off") << endl << endl;
     }
 }

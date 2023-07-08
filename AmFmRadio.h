@@ -17,8 +17,7 @@ struct Freqs
 };
 
 class AmFmRadio {
-//private:
-protected:
+private:
 	Freqs	presets[5];
 	Freqs	previousFreq;
 	Freqs	currentFreq;
@@ -79,9 +78,10 @@ public:
 
 
 	/* feedback fix */
-	char GetBand(); // Gets the current band of the car radio.
+	const char* GetBand(); // Gets the current band of the car radio.
 	Freqs GetPresets(int i); // Gets the present index of the car radio.
 	double SetCurrentStation(); // Sets the current station of the car radio.
+	bool GetPowerOn(); // Gets the radio power on or off.
 
 };
 #endif
